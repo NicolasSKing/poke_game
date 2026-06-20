@@ -3,6 +3,15 @@
 # June 14th, 2018
 # This file holds the classes for all the sprites, and the collide with walls function
 
+from abc import ABC, abstractmethod
+class GameEntity(ABC):
+    @abstractmethod
+    def update(self):
+        pass
+
+    @abstractmethod
+    def draw(self, screen):
+        pass
 import pygame as pg
 from settings import *
 from tilemap import collide_hit_rect
